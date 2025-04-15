@@ -1,11 +1,12 @@
 import turtle
 import math
-from Exercício1_2 import polygon
+from Exercício3_polygon import polygon
 
 bob = turtle.Turtle()
 
 """def circle(t, lenght, r):
     polygon(t, lenght, r)"""
+
 
 def circle(t, r):
     circumference = 2 * math.pi * r
@@ -14,5 +15,5 @@ def circle(t, r):
     polygon(t, length, n)
 
 
-circle(bob, 20, 50)
+circle(bob, 15)
 turtle.mainloop()
