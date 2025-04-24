@@ -26,3 +26,4 @@ def obter_numero(label):
     except ValueError:
         print(f'O que você digitou ("{entrada}") não é um número válido.')
         return obter_numero(label)
+    
