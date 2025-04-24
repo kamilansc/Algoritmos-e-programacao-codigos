@@ -10,10 +10,9 @@ def main():
     
 
 def validar_mes(mes, dia, ano):
-    if mes == 4 or mes == 6 or mes == 9 or mes == 11:
-        if validar_dia(dia):
-            if validar_ano(ano):
-                pass
+    if mes == 4 or mes == 6 or mes == 9 or mes == 11 and validar_dia(dia):
+        if validar_ano(ano):
+            pass
         else:
             print('Você digitou um valor para "DIA" inválido, tente novamente.')
             main()
@@ -23,11 +22,10 @@ def validar_mes(mes, dia, ano):
 def validar_dia(dia):
     if dia <= 30:
         return True
-    return False
-
+    
 
 def validar_ano(ano):
     pass
-    
+
 
 main()
