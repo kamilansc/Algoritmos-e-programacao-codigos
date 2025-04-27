@@ -1,10 +1,10 @@
 # 9. Leia 1 (um) número entre 0 e 100, verifique e escreva se o número é ou não primo.
 
-from funcoes_uteis import obter_numero
+from funcoes_uteis import obter_numero_inteiro
 
 def main():
     label = 'Digite um número de 0 a 100: '
-    numero = obter_numero(label)
+    numero = obter_numero_inteiro(label)
     if numero >= 0 and numero <= 100:
         if eh_primo(numero):
             print(f'O número {numero} é primo.')

@@ -17,7 +17,7 @@ def obter_numero_exceto_zero(label):
         return obter_numero_exceto_zero(label)
     
 
-def obter_numero(label):
+def obter_numero_inteiro(label):
     entrada = receber_resposta(label)
 
     try:
@@ -25,5 +25,5 @@ def obter_numero(label):
         return numero
     except ValueError:
         print(f'O que você digitou ("{entrada}") não é um número válido.')
-        return obter_numero(label)
+        return obter_numero_inteiro(label)
     

@@ -1,13 +1,13 @@
 # 14. Leia 5 (cinco) números inteiros, calcule a sua média e escreva os que são maiores que a média.
 
-from funcoes_uteis import obter_numero
+from funcoes_uteis import obter_numero_inteiro
 
 def main():
-    num1 = obter_numero('Digite o primeiro número: ')
-    num2 = obter_numero('Digite o segundo número: ')
-    num3 = obter_numero('Digite o terceiro número: ')
-    num4 = obter_numero('Digite o quarto número: ')
-    num5 = obter_numero('Digite o quinto número: ')
+    num1 = obter_numero_inteiro('Digite o primeiro número: ')
+    num2 = obter_numero_inteiro('Digite o segundo número: ')
+    num3 = obter_numero_inteiro('Digite o terceiro número: ')
+    num4 = obter_numero_inteiro('Digite o quarto número: ')
+    num5 = obter_numero_inteiro('Digite o quinto número: ')
 
     print('Média:', calcula_media(num1, num2, num3, num4, num5))
     eh_maior(calcula_media(num1, num2, num3, num4, num5), num1, num2, num3, num4, num5)

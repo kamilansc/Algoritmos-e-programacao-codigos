@@ -3,10 +3,10 @@
 from funcoes_uteis import receber_resposta
 
 def main():
-    qtd_horas1 = obter_numero('Digite a quantidade de horas de aulas dada pelo professor 1: ')
-    valor_hora1 = obter_numero('Digite quanto esse professor ganha por hora: ')
-    qtd_horas2 = obter_numero('Digite a quantidade de horas de aulas dada pelo professor 2: ')
-    valor_hora2 = obter_numero('Digite quanto esse segundo professor ganha por hora: ')
+    qtd_horas1 = obter_numero_racional('Digite a quantidade de horas de aulas dada pelo professor 1: ')
+    valor_hora1 = obter_numero_racional('Digite quanto esse professor ganha por hora: ')
+    qtd_horas2 = obter_numero_racional('Digite a quantidade de horas de aulas dada pelo professor 2: ')
+    valor_hora2 = obter_numero_racional('Digite quanto esse segundo professor ganha por hora: ')
     
     salario_prof1 = calcular_salario_total(qtd_horas1, valor_hora1)
     salario_prof2 = calcular_salario_total(qtd_horas2, valor_hora2)
@@ -19,7 +19,7 @@ def main():
 def calcular_salario_total(qtd_horas, valor_hora):
     return qtd_horas*valor_hora
 
-def obter_numero(label):
+def obter_numero_racional(label):
     entrada = receber_resposta(label)
 
     try:
@@ -27,7 +27,8 @@ def obter_numero(label):
         return numero
     except ValueError:
         print(f'O que você digitou ("{entrada}") não é um número válido.')
-        return obter_numero(label)
+        return obter_numero_racional(label)
 
 
-main()
+if __name__ == '__main__':
+    main()
