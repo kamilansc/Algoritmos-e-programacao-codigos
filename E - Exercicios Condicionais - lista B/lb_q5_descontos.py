@@ -1,22 +1,19 @@
 '''Exercício 5: Calculadora de Descontos
 Crie um programa para uma loja que calcule o preço final de um produto com base
 em regras de desconto:
-
 ● Compras acima de R$ 500,00: 15% de desconto ✔
 ● Compras entre R$ 200,00 e R$ 500,00: 10% de desconto ✔
 ● Compras entre R$ 100,00 e R$ 199,99: 5% de desconto ✔
 ● Cliente VIP: desconto adicional de 5% (acumulativo) ✔
 ● Cliente Aniversariante: desconto adicional de 3% (acumulativo) ✔
-
 Conhecimentos Necessários:
 ● Combinação de expressões booleanas
 ● Cálculos percentuais
 ● Estruturas condicionais aninhadas
-
 Estrutura Sugerida:
 1. Função para calcular desconto base (pelo valor) ✔
 2. Função para calcular desconto adicional (VIP e aniversariante) ✔
-3. Função para calcular preço final
+3. Função para calcular preço final ✔
 4. Função principal para interação com usuário ✔'''
 
 from funcoes_uteis import obter_numero_racional
