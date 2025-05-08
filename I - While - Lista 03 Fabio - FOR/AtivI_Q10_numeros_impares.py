@@ -3,5 +3,16 @@
 from funcoes_uteis import ler_num_int
 
 def main():
-    num = ler_num_int('Digite um número: ')
-    
+    lim_inferior = ler_num_int('Digite um valor para o LIMITE INFERIOR: ')
+    lim_superior = ler_num_int('Digite um valor para o LIMITE SUPERIOR: ')
+
+    print(f'Números ímpares entre "{lim_inferior}" e "{lim_superior}"')
+    while 0 < lim_inferior <= lim_superior:
+        if lim_inferior % 2 != 0:
+            print(lim_inferior)
+            lim_inferior += 1
+        else:
+            lim_inferior += 1
+
+
+main()
