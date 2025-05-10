@@ -5,12 +5,14 @@ from funcoes_uteis import ler_num_int
 
 
 def main():
+    print('\n \t>>> Sequência de Fibonacci <<<')
     num = validar_num()
+    print('')
     sequencia_fibonacci(num)
 
 
 def validar_num():
-    num = ler_num_int('Digite um número: ')
+    num = ler_num_int('->Digite o número limite da sequência: ')
     while True:
         if num >= 2:
             return num
@@ -20,19 +22,18 @@ Digite um número (a partir de 2): ''')
 
 
 def sequencia_fibonacci(num):
-    penultimo = 0
+    quantidade_termos = 2
     ultimo = 1
+    penultimo = 0
 
-    while num > 0:
-        resultado = penultimo + ultimo
+    print(f'{penultimo}, {ultimo}', end = '')
+    while quantidade_termos < num:
+        resultado = ultimo + penultimo
+        penultimo = ultimo
         ultimo = resultado
-        num -= 1
-        print(resultado)
-'''    if num == 2:
-        print(a0)
-        print(a1)'''
-
-
+        quantidade_termos += 1
+        print(f', {resultado}', end = '')
+    print(f'\n{'-'*40}')
         
 
 main()
