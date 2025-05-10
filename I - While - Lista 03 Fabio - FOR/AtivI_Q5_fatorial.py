@@ -1,9 +1,9 @@
 # 5. Leia um número, calcule e escreva seu fatorial.
 
-from funcoes_uteis import ler_num_int
+from funcoes_uteis import ler_num_racional
 
 def main():
-    num = ler_num_int('Digite um número: ')
+    num = ler_num_racional('Digite um número: ')
     i = num
     numero = num #pra eu conseguir printar na linha 17
 

@@ -1,9 +1,9 @@
 # 13. Leia N e uma lista de N números e escreva o maior número da lista.
 
-from funcoes_uteis import ler_num_int, ler_num_racional
+from funcoes_uteis import ler_num_racional, ler_num_racional
 
 def main():
-    qtd = ler_num_int('Digite a quantidade de números a ser digitada: ')
+    qtd = ler_num_racional('Digite a quantidade de números a ser digitada: ')
 
     '''maior_numero = 0''' # em caso de n° negativo, o 0 seria o maior, dando erro
     # float (-inf) é melhor, pois, significa o infinito negativo, ele consegue ser menor que qualquer n° real

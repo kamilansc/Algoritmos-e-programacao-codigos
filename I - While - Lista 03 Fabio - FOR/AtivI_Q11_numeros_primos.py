@@ -1,11 +1,11 @@
 # 11. Leia LimiteSuperior e LimiteInferior e escreva todos os números primos entre os limites lidos.
 
-from funcoes_uteis import ler_num_int
+from funcoes_uteis import ler_num_racional
 import math
 
 def main():
-    lim_inferior = ler_num_int('Digite o valor do LIMITE INFERIOR: ')
-    lim_superior = ler_num_int('Digite o valor do LIMITE SUPERIOR: ')
+    lim_inferior = ler_num_racional('Digite o valor do LIMITE INFERIOR: ')
+    lim_superior = ler_num_racional('Digite o valor do LIMITE SUPERIOR: ')
 
     print(f'Números primos entre {lim_inferior} e {lim_superior}: ')
     while lim_inferior >= lim_inferior and lim_inferior < lim_superior:

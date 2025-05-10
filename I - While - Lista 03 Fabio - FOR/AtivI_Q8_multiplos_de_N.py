@@ -1,11 +1,11 @@
 # 8. Leia N , LimiteSuperior e LimiteInferior e escreva todos os múltiplos de N entre os limites lidos.
 
-from funcoes_uteis import ler_num_int
+from funcoes_uteis import ler_num_racional
 
 def main():
-    num = ler_num_int('Digite um número para visualizar seus múltiplos: ')
-    lim_superior = ler_num_int('Digite um número como LIMITE SUPERIOR: ')
-    lim_inferior = ler_num_int('Digite um número como LIMITE INFERIOR: ')
+    num = ler_num_racional('Digite um número para visualizar seus múltiplos: ')
+    lim_superior = ler_num_racional('Digite um número como LIMITE SUPERIOR: ')
+    lim_inferior = ler_num_racional('Digite um número como LIMITE INFERIOR: ')
     i = 0
 
     print(f'\nMúltiplos de {num} entre {lim_inferior} e {lim_superior}:')
