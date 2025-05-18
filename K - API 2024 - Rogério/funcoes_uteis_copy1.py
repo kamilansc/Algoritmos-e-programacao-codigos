@@ -1,3 +1,5 @@
+import os
+
 def ler_num_int(label):
     entrada = input(label)
 
@@ -44,3 +46,7 @@ def ler_num_racional_min(label, minimo):
     except:
         print(f'Ops! A string ("{entrada}") digitada não é válida como racional. Tente novamente!')
         return ler_num_racional_min(label, minimo)
+
+
+def limpar_tela():
+    os.system('cls')
