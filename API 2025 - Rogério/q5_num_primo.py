@@ -20,5 +20,5 @@ def num_eh_primo(num):
     print(f'Número {num} é primo')
     return
 
-
-main()
+if __name__ == '__main__':
+    main()
