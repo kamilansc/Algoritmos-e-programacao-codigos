@@ -1,5 +1,5 @@
 # Início 25/05 - 15h27
-
+# pausa
 
 from q1_number_utils import obter_num_int_positivo
 
