@@ -1,7 +1,7 @@
 # Início: 25/05 19h41
 # Fim:    25/05 20h18
 
-from q1_number_utils import obter_num_int
+from q01_number_utils import obter_num_int
 def main():
     qtd_entrevistas = obter_num_int('Quantidade de entrevistas: ')
 

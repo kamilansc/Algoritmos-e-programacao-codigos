@@ -1,7 +1,7 @@
 # Início 25/05 - 15h27
 # pausa
 
-from q1_number_utils import obter_num_int_positivo
+from q01_number_utils import obter_num_int_positivo
 
 def main():
     qtd_casos_atual = input('Quantidade de casos: ')

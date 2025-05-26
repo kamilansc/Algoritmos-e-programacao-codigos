@@ -16,7 +16,7 @@ def obter_num_int_positivo(label):
     while True:
         num = obter_num_int(label)
 
-        if num > 0:
+        if num >= 0:
             return num
         else:
             print('Inválido como inteiro positivo! Tente novamente!')

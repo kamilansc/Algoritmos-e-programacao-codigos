@@ -1,4 +1,4 @@
-from q1_number_utils import obter_num_int_positivo
+from q01_number_utils import obter_num_int_positivo
 
 def main():
     x = obter_num_int_positivo('Número 1: ')

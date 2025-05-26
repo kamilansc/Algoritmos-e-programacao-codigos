@@ -1,7 +1,7 @@
 # Início 25/05 - 17h05
 # Fim 25/05 - 19h25
 
-from q1_number_utils import obter_num_int_in_faixa, obter_num_int_positivo
+from q01_number_utils import obter_num_int_in_faixa, obter_num_int_positivo
 
 def main():
     menu ='''
