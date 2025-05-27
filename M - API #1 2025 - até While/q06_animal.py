@@ -1,5 +1,5 @@
-from q4_text_utils import obter_texto_min
-from q2_int_utils import obter_num_int
+from q04_text_utils import obter_texto_min
+from q02_int_utils import obter_num_int
 import math
 
 def main():

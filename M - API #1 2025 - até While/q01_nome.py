@@ -1,4 +1,4 @@
-from q4_text_utils import obter_texto
+from q04_text_utils import obter_texto
 
 def main():
     nome_usuario = obter_texto('Nome do usuário: ')

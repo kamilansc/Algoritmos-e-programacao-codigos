@@ -1,5 +1,5 @@
-from q3_float_utils import obter_num_float_positivo, obter_num_float_minimo
-from q2_int_utils import obter_num_int_in_faixa
+from q03_float_utils import obter_num_float_positivo, obter_num_float_minimo
+from q02_int_utils import obter_num_int_in_faixa
 
 def main():
     # montante = juros + capital
