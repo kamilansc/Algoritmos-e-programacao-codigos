@@ -1,6 +1,6 @@
-from q2_int_utils import obter_num_int_positivo
-from q4_text_utils import obter_texto
-from q3_float_utils import obter_num_float_positivo
+from q02_int_utils import obter_num_int_positivo
+from q04_text_utils import obter_texto
+from q03_float_utils import obter_num_float_positivo
 
 def main():
     qtd_familias = obter_num_int_positivo('Quantidade de famílias: ')
