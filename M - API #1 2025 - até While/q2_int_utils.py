@@ -10,7 +10,13 @@ def obter_num_int(label):
 
 
 def obter_num_int_positivo(label):
-    pass
+    entrada = obter_num_int(label)
+
+    if entrada > 0:
+        return entrada
+    else:
+        print('Número inválido como positivo. Tente novamente!')
+        return obter_num_int_positivo(label)
 
 
 def obter_num_int_minimo(label):
