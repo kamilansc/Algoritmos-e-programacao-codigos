@@ -7,4 +7,3 @@ def obter_num_int(label):
     except:
         print('O que você digitou não é válido como número inteiro. Tente novamente!')
         return obter_num_int
-
