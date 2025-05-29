@@ -1,7 +1,6 @@
 import time
 from random import randint
 
-
 def main():
   print('----> GenPass <----')
   print('Olá vamos gerar um senha para você!')
