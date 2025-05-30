@@ -7,6 +7,17 @@ def main():
     print(encontrar_mdc(x, y))
 
 
+def encontrar_mdc(num1, num2):
+    resto = num1%num2
+    if resto == 0:
+        return num2
+    
+    else:
+        num1 = num2
+        num2 = resto
+        return encontrar_mdc(num1, num2)
+
+
 '''def encontrar_mdc(x,y):
     if x < y:
         menor_num = x
@@ -27,17 +38,6 @@ def main():
         else:
             contador += 1
     return divisor_comum'''
-
-
-def encontrar_mdc(num1, num2):
-    resto = num1%num2
-    if resto == 0:
-        return num2
-    
-    else:
-        num1 = num2
-        num2 = resto
-        return encontrar_mdc(num1, num2)
 
 
 main()

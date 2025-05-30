@@ -1,9 +1,17 @@
 # Início 25/05 - 16h33
 
+from q01_number_utils import obter_num_int
 import math
 # Escreva uma função que verifique todos os 
 # números de N até M, escreva ao lado de cada número se é ou 
 # não primo.
+
+def main():
+    n = obter_num_int('Número N:')
+    m = obter_num_int('Número M: ')
+
+    eh_primo(n, m)
+    
 
 def eh_primo(n: int, m: int):
     contador = n
@@ -23,11 +31,11 @@ def eh_primo(n: int, m: int):
                     break
 
                 divisor += 1
-            print(primo)
             if primo: 
                 print(f'{contador} é primo')
             else: 
                 print(f'{contador} não é primo')
         contador += 1
 
-eh_primo(1, 20)
+
+main()
