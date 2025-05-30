@@ -1,6 +1,7 @@
 from funcoes_uteis_copy1 import obter_texto, ler_num_racional_positivo
 
 def main():
+    print('>> VIAGEM COM MILHAS OU EM R$ <<')
     origem = obter_texto('Origem: ')
     destino = obter_texto('Destino: ')
     valor_reais_site = ler_num_racional_positivo('Valor da passagem, em R$, no site: ')
@@ -13,6 +14,7 @@ def main():
     percentual_milhas_baratas = (valor_milhas_baratas/valor_reais_site)*100
 
     print(f'''
+        Viagem de {origem} para {destino}
         Valor site (R$): R$ {valor_reais_site}
         Valor em milhas padrão (R$): R$ {valor_milhas_padrao:.2f}
             > Equivale à {percentual_milhas_padrao:.1f}% do valor do site
