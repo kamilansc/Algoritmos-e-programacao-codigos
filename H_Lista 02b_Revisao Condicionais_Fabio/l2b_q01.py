@@ -1,7 +1,8 @@
-from ..modulos import funcoes_uteis_copy1
+from funcoes_uteis_copy2 import ler_num_int
+
 
 def main():
-    num = funcoes_uteis_copy1.ler_num_int('Múmero: ')
+    num = ler_num_int('Número: ')
 
     if num > 0:
         print(f'{num} é positivo')
