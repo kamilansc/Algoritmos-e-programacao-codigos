@@ -5,7 +5,7 @@ def main():
     lmt_diario_clr = float(input('Limite diário de caloria: '))
 
     clr_diaria = 0
-    menor_consumo = float('inf')
+    menor_consumo = 0
     maior_consumo = 0
     total_caloria_periodo = 0
     dia_menor_consumo = 0
@@ -22,11 +22,11 @@ def main():
         total_caloria_periodo += clr_diaria
 
         
-        if  clr_diaria < menor_consumo:
+        if menor_consumo == 0 or clr_diaria < menor_consumo:
             menor_consumo = clr_diaria
             dia_menor_consumo = dia
     
-        if clr_diaria > maior_consumo:
+        if maior_consumo == 0 or clr_diaria > maior_consumo:
             maior_consumo = clr_diaria
             dia_maior_consumo = dia
         
@@ -38,7 +38,7 @@ def main():
         mensagem = f'Você não excedeu o limite diário de {lmt_diario_clr} calorias.'
 
     print(f'''
-    Média calorica diária: {media_calorica_prd}
+    Média calorica diária: {media_calorica_prd:.2f} cal
     Dia com menor consumo: {dia_menor_consumo}
     Dia com maior consumo: {dia_maior_consumo}
     Situação de calorias diárias: {mensagem}''')
