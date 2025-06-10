@@ -3,6 +3,7 @@ def main():
     >>>> WordPLAY <<<<
     1 - Palavras com Tamanho N+
     2 - Palavras sem o caractere proibido
+    3 - Palavras que evitam uma sequência x de caracteres
 
     0 - Sair
     >>>> '''
@@ -15,6 +16,8 @@ def main():
                 palavra = linha.strip()
                 if len(palavra) >= tamanho:
                     print(2*' ', palavra)
+        
+            opcao = int(input(menu))
 
         if opcao == 2:
             arquivo = open('br-sem-acentos.txt')
@@ -29,12 +32,41 @@ def main():
             
             mostrar_dados_descritivos(contador_filtro, contador_total)
         
-        opcao = int(input(menu))
+            opcao = int(input(menu))
+
+        if opcao == 3:
+            arquivo = open('br-sem-acentos.txt')
+            contador_total = 0
+            contador_filtro = 0
+            letras_proibidas = input('Digite uma série de letras proibidas: ')
+
+            for linha in arquivo:
+                palavra = (linha.strip()).lower()
+                contador_total += 1
+                if avoids(palavra, letras_proibidas) == True:
+                    print(palavra)
+                    contador_filtro += 1
+            
+            mostrar_dados_descritivos(contador_filtro, contador_total)
+
+            opcao = int(input(menu))
+            
 
 
 def nao_tem_caractere(palavra, caractere):
     for letra in palavra:
         if letra == caractere:
+            return False
+    return True
+
+
+def avoids(palavra, letras_proibidas):
+    lista = []
+    for letra in letras_proibidas:
+        lista.append(letra)
+
+    for letra in palavra:
+        if letra in lista:
             return False
     return True
 
