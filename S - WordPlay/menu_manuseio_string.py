@@ -1,4 +1,7 @@
-from uteis_str import contem_caractere, avoids, uses_all
+# ATIVIDADE DO CAPÍTULO 9 (ESTUDO DE CASO: JOGO DE PALAVRAS) DO LIVRO PENSE EM PYTHON
+# ASSUNTO: MANIPULAÇÃO DE STRINGS
+
+from uteis_str import contem_caractere, avoids, uses_only, uses_all
 
 def main():
     menu = '''
@@ -6,7 +9,8 @@ def main():
     1 - Palavras com Tamanho N+ (9.1)
     2 - Palavras sem o Caractere Proibido (9.2)
     3 - Palavras que evitam Letras Proibidas (9.3)
-    4 - Palavras que contem apenas letras permitidas (9.4)
+    4 - Palavras que contém apenas letras permitidas (9.4)
+    5 - Palavras que só contém letras obrigatórias (9.5)
 
     0 - Sair
     >>>> '''
@@ -21,6 +25,9 @@ def main():
         elif opcao == 4:
             letras_permitidas = input('Letras permitidas: ')
             mostrar_palavras_apenas_com_letras_permitidas(letras_permitidas)
+        elif opcao == 5:
+            letras_obrigatorias = input('Letras obrigatórias: ')
+            mostrar_palavras_que_so_contem_letras_obrigatorias(letras_obrigatorias)    
         
         
         opcao = int(input(menu))
@@ -78,12 +85,26 @@ def mostrar_palavras_apenas_com_letras_permitidas(letras_permitidas):
     for linha in arquivo:
         palavra = (linha.strip()).lower()
         contador += 1
-        if uses_all(palavra, letras_permitidas):
+        if uses_only(palavra, letras_permitidas):
             print(palavra)
             contador_filtro += 1
     
     mostrar_dados_descritivos(contador_filtro, contador)
-    
+
+
+def mostrar_palavras_que_so_contem_letras_obrigatorias(letras_obrigatorias):
+    contador = 0
+    contador_filtro = 0
+    arquivo = open('br-sem-acentos.txt')
+    for linha in arquivo:
+        palavra = (linha.strip()).lower()
+        contador += 1
+        if uses_all(palavra, letras_obrigatorias):
+            print(palavra)
+            contador_filtro += 1
+
+    mostrar_dados_descritivos(contador_filtro, contador)
+
 
 # Customização
 def mostrar_dados_descritivos(contador_filtro, contador_total):
