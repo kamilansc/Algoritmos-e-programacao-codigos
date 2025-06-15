@@ -1,7 +1,7 @@
 # ATIVIDADE DO CAPÍTULO 9 (ESTUDO DE CASO: JOGO DE PALAVRAS) DO LIVRO PENSE EM PYTHON
 # ASSUNTO: MANIPULAÇÃO DE STRINGS
 
-from uteis_str import contem_caractere, avoids, uses_only, uses_all
+from uteis_str import contem_caractere, avoids, uses_only, uses_all, is_abecedarian
 
 def main():
     menu = '''
@@ -11,6 +11,7 @@ def main():
     3 - Palavras que evitam Letras Proibidas (9.3)
     4 - Palavras que contém apenas letras permitidas (9.4)
     5 - Palavras que só contém letras obrigatórias (9.5)
+    6 - Palavras em que as letras são em ordem alfabética (9.6)
 
     0 - Sair
     >>>> '''
@@ -27,7 +28,9 @@ def main():
             mostrar_palavras_apenas_com_letras_permitidas(letras_permitidas)
         elif opcao == 5:
             letras_obrigatorias = input('Letras obrigatórias: ')
-            mostrar_palavras_que_so_contem_letras_obrigatorias(letras_obrigatorias)    
+            mostrar_palavras_que_so_contem_letras_obrigatorias(letras_obrigatorias)
+        elif opcao == 6:
+            mostrar_palavras_com_letras_em_ordem_alfabetica()
         
         
         opcao = int(input(menu))
@@ -103,6 +106,20 @@ def mostrar_palavras_que_so_contem_letras_obrigatorias(letras_obrigatorias):
             print(palavra)
             contador_filtro += 1
 
+    mostrar_dados_descritivos(contador_filtro, contador)
+
+
+def mostrar_palavras_com_letras_em_ordem_alfabetica():
+    contador = 0
+    contador_filtro = 0
+    arquivo = open('br-sem-acentos.txt')
+    for linha in arquivo:
+        palavra = linha.strip().lower()
+        contador += 1
+        if is_abecedarian(palavra):
+            print(palavra)
+            contador_filtro += 1
+    
     mostrar_dados_descritivos(contador_filtro, contador)
 
 

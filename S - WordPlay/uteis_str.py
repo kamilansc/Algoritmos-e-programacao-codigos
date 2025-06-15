@@ -24,3 +24,17 @@ def uses_all(palavra, letras_obrigatorias):
         if not contem_caractere(palavra, letra):
             return False
     return True
+
+
+def is_abecedarian(palavra):
+    letra_anterior = ''
+    for letra in palavra:
+        if letra < letra_anterior:
+            return False
+        letra_anterior = letra
+
+
+    return True
+
+
+is_abecedarian('kamila')
