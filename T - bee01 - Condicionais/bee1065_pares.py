@@ -16,7 +16,9 @@ def obter_num_int():
     except:
         return obter_num_int()
     
-    
+
 def eh_par(num):
     return num % 2 == 0
+
+
 main()
