@@ -88,6 +88,10 @@ def eh_maior(valor1, valor2):
     return valor1 if valor1 > valor2 else valor2
 
 
+def eh_menor(valor1, valor2):
+    return valor1 if valor1 < valor2 else valor2
+
+
 def multiplicar(valor1, valor2):
     return valor1 * valor2
 
