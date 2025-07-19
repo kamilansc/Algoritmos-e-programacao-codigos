@@ -1,4 +1,4 @@
-from funcoes_genericas import *
+from vetor_funcionalidades import *
 
 def main():
     menu = '''\n\t>>> Bem vindo ao PlayNumbers !!! <<<
