@@ -1,5 +1,5 @@
 from funcoes_validacao import obter_num_int_faixa
-from fmr_funcoes import filter, reduce, somar
+from fmr_funcoes import filter, reduce
 
 def rankear_resultados_pela_media(escolas, tamanho_ranking):
     top_n_escolas = []
@@ -46,6 +46,58 @@ def calcular_media_nacional_area(escolas, area):
         media_nacional = 0
     
     return media_nacional
+
+
+def identificar_melhor_escola_de_area_por_estado(escolas, area, estado):
+    escolas_estado = filter(escolas, lambda x:x.get('uf', '') == estado)
+
+    melhor_escola = sorted(escolas_estado, key= lambda x:x[area], reverse=True)[0]
+
+    return melhor_escola
+
+
+def mostrar_escolas_por_renda_e_estado(escolas, estado):
+    escolas_estado = filter(escolas, lambda x:x.get('uf', '') == estado)
+
+    ordem_renda = [
+        'muito baixo',
+        'baixo',
+        'meio baixo',
+        'meio',
+        'meio alto',
+        'alto'
+    ]
+
+    escolas_renda_ordenadas = []
+    for categoria in ordem_renda:
+        escolas_renda_ordenadas.extend(filter(escolas_estado, lambda x:x.get('nivel_socioeconomico', '').lower() == categoria))
+    
+    return escolas_renda_ordenadas
+
+
+def procurar_escola_por_nome(escolas):
+    nome = input('Digite o nome da escola: ')
+
+    escola = filter(escolas, lambda escola:escola.get('nome').upper() == nome.upper())
+    
+    return escola
+
+
+def mostrar_ranking_por_estado(escolas, estado):
+    escolas_estado = filter(escolas, lambda x:x.get('uf','') == estado)
+    ranking = rankear_resultados_pelo_estado(escolas, len(escolas_estado), estado)
+
+    return ranking
+
+
+def mostrar_ranking_por_regiao(escolas, estados_regiao):
+    escolas_regiao = []
+    for estado in estados_regiao:
+        escolas_regiao.extend(filter(escolas, lambda x:x.get('uf', '').upper() == estado))
+    
+    ranking = rankear_resultados_pela_media(escolas_regiao, len(escolas_regiao))
+    
+    return ranking
 
 
 # FUNÇÕES DE EXIBIÇÃO E/OU VERIFICAÇÃO
@@ -105,3 +157,27 @@ def verificar_rede():
         return 'Municipal'
     elif escolha == 4:
         return 'Privada'
+
+
+def verificar_regiao():
+    mini_menu  = '''| OPÇÕES DE REGIÕES DO BRASIL |
+    1 - NORTE
+    2 - NORDESTE
+    3 - CENTRO-OESTE
+    4 - SUDESTE
+    5 - SUL
+-> Digite a opção na qual deseja fazer a consulta: '''
+
+    saida = 'Opção inválida. Tente novamente!'
+    escolha = obter_num_int_faixa(mini_menu, 1, 5, saida)
+
+    if escolha == 1:
+        return ['AM', 'AC', 'RO', 'RR', 'AP', 'PA', 'TO']
+    elif escolha == 2:
+        return ['MA', 'PI', 'CE', 'RN', 'PB', 'PE', 'AL', 'SE', 'BA']
+    elif escolha == 3:
+        return ['MT', 'GO', 'MS']
+    elif escolha == 4:
+        return ['MG', 'ES', 'RJ', 'SP']
+    elif escolha == 5:
+        return ['PR', 'SC', 'RS']
