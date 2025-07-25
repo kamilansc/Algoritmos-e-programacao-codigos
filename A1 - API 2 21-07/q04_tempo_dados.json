@@ -1,0 +1,8 @@
+{"timestamp": "2024-07-20 14:30:00",
+"temperatura_celsius": 28.7,
+"umidade_relativa_percentual": 75.2,
+"velocidade_vento_kmh": 15.3, 
+"direcao_vento": "NE",
+"choveu_ult_hora": false,
+"indice_uv": 7,
+"tipo_ceu": "Parcialmente Nublado"}
